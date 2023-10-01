@@ -1,0 +1,102 @@
+.multi-select-header{
+    width: 100%;
+    display: flex;
+    align-items: end; 
+    min-height: 40px;
+    font-size: 13px;
+}
+
+.multi-select{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.multi-select-content{
+    position: absolute; 
+    width: 100%;   
+    border-radius: 4px;
+    background-color: whitesmoke;
+    font-size: 13px;
+}
+
+.multi-select-content .item{
+    position: relative; 
+    color: #000000; 
+    font-size: 13px;
+    border-radius: 4px;
+}
+.multi-select-content .item:hover{
+    background-color: #dcdcdc;
+}
+
+.multi-select-content .item div{
+    margin-left: 18px;
+    padding: 6px;
+}
+.multi-select-content .item span{
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px; 
+} 
+
+.multi-select-content .item span::after{
+    border: 0.125em solid;
+    border-right: 0;
+    border-top: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 0.375em;
+    left: 26%;
+    position: absolute;
+    top: 32%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: opacity 0.2s ease-in-out;
+    width: 0.75em;
+    color: #007aff;
+    opacity: 0;
+}
+
+.multi-select-content .item.select{
+    color: #007aff;
+}
+
+.multi-select-content .item.select span::after{ 
+    opacity: 1;
+}
+.multi-select-header .label{
+    display: flex; 
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+.multi-select-header .item{
+    background-color: #dedede;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+
+.multi-select-header .item .label{
+    margin-left: 4px;
+}
+
+.multi-select-header .item .icon{
+    margin-left: 4px;
+    display: flex;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+
+.multi-select-header .item .icon:hover{
+    color: #000000;
+}

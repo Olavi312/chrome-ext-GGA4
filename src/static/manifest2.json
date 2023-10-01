@@ -1,0 +1,27 @@
+{
+	"name": "Props State Manager",
+	"short_name": "PSM",
+	"description": "",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"background": {
+		"scripts": ["serviceWorker.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [ "*://*/*" ],
+			"js": [ "contentScript.js" ]
+		}
+	],
+	"permissions": [
+		"storage",
+		"tabs",
+		"scripting",
+		"activeTab",
+		"webRequest",
+		"http://*/*",
+		"https://*/*",
+		"<all_urls>"
+	]
+}
